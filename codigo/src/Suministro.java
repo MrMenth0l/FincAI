@@ -37,9 +37,7 @@ class Suministro
 
     public CabezaGanado getNecesita() {return Necesita;}
 
-    public Suministrador getSuministrador() {
-        return Suministrador;
-    }
+    public Suministrador getSuministrador() {return Suministrador;}
 
     public void setSuministrador(Suministrador suministrador) {
         Suministrador = suministrador;
