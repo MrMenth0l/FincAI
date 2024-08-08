@@ -15,6 +15,8 @@ public class Cosecha
         this.geografia = geografia;
     }
 
+
+
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
@@ -51,8 +53,5 @@ public class Cosecha
         return epoca;
     }
 
-    public String getGeografia() {
-
-
-    }
+    public String getGeografia() {return geografia;}
 }

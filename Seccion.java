@@ -4,6 +4,8 @@ public class Seccion
     private int tamaño;
     private String funcion;
     private String estado;
+    private Suministrador suministrador;
+
 
     public Seccion(String seccion, int tamaño, String funcion, String estado)
     {

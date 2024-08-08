@@ -35,6 +35,8 @@ class Suministro
         Necesita = necesita;
     }
 
+    public CabezaGanado getNecesita() {return Necesita;}
+
     public String getSuministrador() {
         return Suministrador;
     }
@@ -43,4 +45,7 @@ class Suministro
         Suministrador = suministrador;
     }
 
+    public void setDiasDesdeCompra(int diasDesdeCompra) {DiasDesdeCompra = diasDesdeCompra;}
+
+    public int getDiasDesdeCompra() {return DiasDesdeCompra;}
 }
