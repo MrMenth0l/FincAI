@@ -4,7 +4,7 @@ class Suministro
     private String Tipo;
     private int Cantidad;
     private CabezaGanado Necesita;
-    private String Suministrador;
+    private Suministrador Suministrador;
     private int DiasDesdeCompra;
 
     public void setNombre(String nombre) {
@@ -37,11 +37,11 @@ class Suministro
 
     public CabezaGanado getNecesita() {return Necesita;}
 
-    public String getSuministrador() {
+    public Suministrador getSuministrador() {
         return Suministrador;
     }
 
-    public void setSuministrador(String suministrador) {
+    public void setSuministrador(Suministrador suministrador) {
         Suministrador = suministrador;
     }
 
