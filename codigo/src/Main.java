@@ -77,10 +77,10 @@ public class Main
                     System.out.println("Ingresar de nuevo: ");
                     if (sc.next() == pass) {
                         usuario.setPass(pass);
-                    }
+                        log_out = false;
+                    }else {System.out.println("No coinciden las contraseñas");}
                     usuario.setFinca(finca);
                     finca.addUsuarios(usuario);
-                    log_out = false;
                 }
             };
             finca.setSetup(true);
