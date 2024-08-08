@@ -253,7 +253,9 @@ public class Main
                 }
             };
             while (active)//Loop general para interactuar
-            {System.out.println("");}
+            {
+                active = false;
+            }
         }
     }
 }

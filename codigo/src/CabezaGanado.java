@@ -9,7 +9,6 @@ public class CabezaGanado
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
-
     public String getNombre() {
         return Nombre;
     }
@@ -17,7 +16,6 @@ public class CabezaGanado
     public void setRaza(String raza) {
         Raza = raza;
     }
-
     public String getRaza() {
         return Raza;
     }
@@ -25,7 +23,6 @@ public class CabezaGanado
     public void setEdad(int edad) {
         Edad = edad;
     }
-
     public int getEdad() {
         return Edad;
     }
@@ -33,7 +30,6 @@ public class CabezaGanado
     public void setEstado(String estado) {
         Estado = estado;
     }
-
     public String getEstado() {
         return Estado;
     }
@@ -41,7 +37,6 @@ public class CabezaGanado
     public void setConsumo(String consumo) {
         Consumo = consumo;
     }
-
     public String getConsumo() {
         return Consumo;
     }
