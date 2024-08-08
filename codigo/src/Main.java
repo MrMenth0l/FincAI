@@ -4,14 +4,17 @@ public class Main
 {
     public static void main(String[] args)
     {
-        while (true) {
+        while (true) //loop pq si
+        {
+            boolean active = true;
             Fincai fincai = new Fincai();
             Scanner sc = new Scanner(System.in);
             int opc = 0;
             System.out.println("Bienvenido a FincAI");
             boolean log_out = true;
             Finca finca = new Finca();
-            while (log_out) {
+            while (log_out) //Loop para ingresar usuario
+                {
                 System.out.println("Que desea hacer:" +
                         "\n1. Iniciar sesion" +
                         "\n2. Crear cuenta");
@@ -43,7 +46,7 @@ public class Main
                         if (finca.getUsuarios().get(i).getPass() == pass) {
                             System.out.println("Bienvenido.");
                         } else {
-                            System.out.println("Ingrese una contraseña correcto");
+                            System.out.println("Ingrese una contraseña correcta");
                         }
                     }
                     log_out = false;
@@ -79,10 +82,10 @@ public class Main
                     finca.addUsuarios(usuario);
                     log_out = false;
                 }
-            }
-            ;
+            };
             finca.setSetup(true);
-            while (finca.isSetup()) {
+            while (finca.isSetup()) //Lopp para configuracion inicial de una finca
+            {
                 System.out.println("Bienvenido a FincAI, primero, establezcamos su finca en el programa" +
                         "\n Que operacion desea hacer:");
                 System.out.println("1. Agregar sus cabezas de ganado"
@@ -248,7 +251,9 @@ public class Main
                     default:
                         break;
                 }
-            }
+            };
+            while (active)//Loop general para interactuar
+            {System.out.println("");}
         }
     }
 }
