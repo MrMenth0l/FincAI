@@ -22,12 +22,14 @@ public class Main
                 if (opc == 1) {
                     System.out.println("Ingrese el nombre de la finca con la que esta registrado: ");
                     String nombre = sc.next();
+
                     for (int i = 0; i < fincai.getFincas().size(); i++) {
                         if (nombre.equals(fincai.getFincas().get(i).getNombre_Finca())) {
                             finca = fincai.getFincas().get(i);
                         } else {
                             System.out.println("Ingrese un nombre correcto");
                         }
+
                     }
                     String usuario = "";
                     String pass = "";
@@ -36,7 +38,7 @@ public class Main
                     System.out.println("Ingrese su contraseña");
                     pass = sc.next();
                     for (int i = 0; i < finca.getUsuarios().size(); i++) {
-                        if (finca.getUsuarios().get(i).getUser() == usuario) {
+                        if (finca.getUsuarios().get(i).getUser().equals(usuario)) {
                             System.out.println("Bienvenido.");
                         } else {
                             System.out.println("Ingrese un usuario correcto");
@@ -48,8 +50,9 @@ public class Main
                         } else {
                             System.out.println("Ingrese una contraseña correcta");
                         }
+                        log_out = false;
                     }
-                    log_out = false;
+
                 } else if (opc == 2) {
                     Usuario usuario = new Usuario();
                     String pass = "";
@@ -67,23 +70,27 @@ public class Main
                         }
 
                     } else if (opc == 2) {
+                        Token_gen tg = new Token_gen();
                         System.out.println("Ingrese el nombre de su finca: ");
                         finca.setNombre_Finca(sc.next());
+                        tg.setFinca(finca);
+                        finca.setIdentificador(tg.getFin());
+                        System.out.println("Este es el número de acceso a su finca: " + tg.getFin());
                     }
                     System.out.println("Ingresar su nombre de usuario: ");
                     usuario.setUser(sc.next());
                     System.out.println("Ingresar su contraseña: ");
                     pass = sc.next();
                     System.out.println("Ingresar de nuevo: ");
-                    if (sc.next() == pass) {
+                    if (sc.next().equals(pass)) {
                         usuario.setPass(pass);
-                        log_out = false;
+                        finca.setSetup(true);
+                        log_out=false;
                     }else {System.out.println("No coinciden las contraseñas");}
                     usuario.setFinca(finca);
                     finca.addUsuarios(usuario);
                 }
             };
-            finca.setSetup(true);
             while (finca.isSetup()) //Lopp para configuracion inicial de una finca
             {
                 System.out.println("Bienvenido a FincAI, primero, establezcamos su finca en el programa" +
